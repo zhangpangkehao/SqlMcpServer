@@ -3,6 +3,7 @@
 [![Release](https://img.shields.io/github/v/release/zhangpangkehao/SqlMcpServer)](https://github.com/zhangpangkehao/SqlMcpServer/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/zhangpangkehao/SqlMcpServer/total)](https://github.com/zhangpangkehao/SqlMcpServer/releases)
 [![Platform](https://img.shields.io/badge/platform-Windows%20x64-0078d4)](#)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 让 AI 助手通过 [MCP](https://modelcontextprotocol.io) 直接查询你的 SQL Server。
 
@@ -118,3 +119,11 @@ dotnet publish -c Release -r win-x64 --self-contained true ^
 只读约束由 `Sql/SqlGuard.cs` 强制执行，共五道检查：词法中性化 → 单语句约束 → 必须以 SELECT/WITH 开头 → 关键字黑名单 → 行数与超时上限。
 
 **建议同时使用只读数据库账号**（`db_datareader` 角色），形成程序侧与数据库侧的双重防线。详见接入指南第五节。
+
+---
+
+## 许可证
+
+本项目采用 **GNU General Public License v3.0**（GPL-3.0），完整条款见 [LICENSE](LICENSE)。
+
+你可以自由地使用、修改、分发本软件，包括用于商业用途；但**衍生作品必须以相同的 GPL-3.0 条款开源**，且分发二进制时须一并提供对应源码。本软件不提供任何担保。

@@ -1,0 +1,6 @@
+# Shell 脚本必须保持 LF：若带 CRLF，Linux / Git Bash 下 shebang 行会变成
+# "#!/usr/bin/env bash\r" 而导致 bad interpreter 报错
+*.sh text eol=lf
+
+# GPL 许可证保持官方原文的 LF 换行
+LICENSE text eol=lf
