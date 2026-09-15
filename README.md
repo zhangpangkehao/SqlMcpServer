@@ -1,8 +1,25 @@
 # SqlMcpServer — SQL Server 只读 MCP 服务器
 
+[![Release](https://img.shields.io/github/v/release/zhangpangkehao/SqlMcpServer)](https://github.com/zhangpangkehao/SqlMcpServer/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/zhangpangkehao/SqlMcpServer/total)](https://github.com/zhangpangkehao/SqlMcpServer/releases)
+[![Platform](https://img.shields.io/badge/platform-Windows%20x64-0078d4)](#)
+
 让 AI 助手通过 [MCP](https://modelcontextprotocol.io) 直接查询你的 SQL Server。
 
 **设计目标**：复制即用。单个 exe，不需要启动任何后台服务，不需要安装运行时，双击即可配置。
+
+---
+
+## 下载
+
+**→ [前往 Releases 下载最新版](https://github.com/zhangpangkehao/SqlMcpServer/releases/latest)**
+
+| 文件 | 大小 | 说明 |
+| --- | --- | --- |
+| `SqlMcpServer-1.0.0-win-x64-selfcontained.exe` | 73 MB | **推荐**。自包含 .NET 运行时，双击即用，无需安装任何依赖 |
+| `SqlMcpServer-1.0.0-win-x64-framework.zip` | 1.8 MB | 体积小，需预装 [.NET 9 运行时](https://dotnet.microsoft.com/download/dotnet/9.0) |
+
+要求 Windows x64 + SQL Server 2012 及以上（实测 2019 / 2022）。下载后请用同页的 `SHA256SUMS.txt` 校验完整性。
 
 ---
 
@@ -20,7 +37,7 @@
 ## 快速开始
 
 ```bat
-:: 1. 双击运行，进入交互控制台
+:: 1. 双击运行下载到的 SqlMcpServer.exe，进入交互控制台
 SqlMcpServer.exe
 
 :: 2. 选 [2] 配置数据库连接，选 [1] 测试连通性
@@ -68,7 +85,7 @@ sqlserverMCP/
 │   ├── Tools/SqlToolset.cs        五个工具的注册与实现
 │   ├── Config/ServerConfig.cs     三层配置（文件 / 环境变量 / 命令行）
 │   └── Cli/InteractiveShell.cs    双击时的配置向导
-├── dist/                          发布产物
+├── dist/                          发布产物（.gitignore 已排除，请从 Releases 下载）
 │   ├── win-x64-selfcontained/     自包含单文件（推荐，免运行时）
 │   └── win-x64-framework/         依赖 .NET 9 运行时，体积小
 ├── skills/
