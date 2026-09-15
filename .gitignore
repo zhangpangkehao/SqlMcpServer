@@ -1,0 +1,24 @@
+# ---- 编译产物 ----
+bin/
+obj/
+*.user
+*.suo
+.vs/
+*.pdb
+*.cache
+
+# ---- 发布产物（体积大，且含真实连接配置，请勿提交） ----
+dist/
+publish/
+
+# ---- 敏感配置：含明文数据库账号密码 ----
+appsettings.json
+appsettings.*.json
+!appsettings.example.json
+*.pfx
+*.pem
+*.key
+
+# ---- 本地工作区（AI 助手记忆/会话数据） ----
+.workbuddy/
+.idea/
